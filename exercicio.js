@@ -86,3 +86,17 @@ function mes (mes){
             break;
    }
  }
+
+ //5 - Crie uma função que receba dois números e retorne se o primeiro é maior ou igual ao segundo dependendo da função Callback.
+function quintaquestao(valor1, valor2, callback) {
+    console.log(callback(valor1,valor2));
+}
+
+quintaquestao(24,28, function(valor1,valor2) {
+    if(valor1 >= valor2) {
+        return valor1 + ' O valor 1 é maior ou igual ao valor 2!';
+    }
+    else{
+      return valor2 + ' O valor 2 é maior!';
+    }
+})
