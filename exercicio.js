@@ -27,3 +27,17 @@ segundaquestao(10,2, function(valor1,valor2){
 
 //3 – Crie uma função que recebe um parâmetro e uma callback que retorna uma outra função que recebe um parâmetro e chama essa callback que verifica se um número inteiro passado na primeira função como parâmetro é divisível por um outro numero passado pela função interna e retorne true ou false.
 
+function terceiraquestao(valor1, callback) {
+ return function terceiraquestaodenovo(valor2){
+     callback(valor1,valor2);
+ }
+}
+
+var terceiraquestaovalor = terceiraquestao(30, function (valor1,valor2){
+    if (valor1 % valor2 == 0) {
+        return true;
+    } else {return false};
+})
+
+terceiraquestaovalor(3);
+
